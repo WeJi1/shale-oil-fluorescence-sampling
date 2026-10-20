@@ -1,4 +1,4 @@
-# Archived shale-oil fluorescence imaging: transparent computational audit
+# Reproducible Analysis of Spectral Sensitivity and Spatial ROI Sampling in Shale-Oil Fluorescence Imaging
 
 **Status: candidate research-reproducibility release; NOT public until authors approve data ownership, permissions, license, and metadata.** This is a newly defined, auditable image-analysis implementation (2026-10-19), **not recovery of the original historical algorithm**.
 
