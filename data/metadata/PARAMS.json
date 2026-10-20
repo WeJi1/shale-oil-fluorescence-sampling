@@ -1,0 +1,23 @@
+{
+  "audit_status": "NEW fully specified conditional image algorithm; NOT historical recovery",
+  "image_color": "input PNG RGBA, decoded sRGB 8-bit channel values; no color calibration",
+  "valid_pixel": "alpha > 0; exclude probable saturated pure-red annotation by R>=180,G<=80,B<=80,R>2G,R>2B; preserve whites and dark minerals",
+  "proxy": "max(0,G-B)*(max(R,G,B)/255)**2; no gamma linearization, no denoising or smoothing",
+  "hotspot": "rank exactly ceil(0.05*valid_pixel_count) eligible pixels by proxy descending; ties broken by raster index ascending via stable argsort",
+  "L0": "min(full_input_image_height,full_input_image_width) before masking",
+  "roi_width": "max(1, floor(relative_length * L0+0.5)); same for height (round half up)",
+  "valid_area": "ROI accepted iff valid_pixels >= 0.90*total_roi_pixels; hotspot fraction = hotspot_pixels/valid_pixels",
+  "top_left_positions": "all integer one-pixel increment top-left positions with full square ROI inside complete image and >=90% valid area",
+  "multiscale": "for L/L0=0.1..0.9, exact population CV (ddof 0) of hotspot fractions over all admissible window top-lefts, E > 0",
+  "representative": "smallest scale whose CV<=0.20 and all larger evaluated scales also CV<=0.20; else >0.9",
+  "strata_grid": "for each N choose nrow from 1..ceil(sqrt(N*H_positions/W_positions))+2 and ncol=ceil(N/nrow), minimize score 0.5*aspect_deviation + 0.5*(K-N)/N with aspect_deviation=abs(log((Hpositions/nrow)/(Wpositions/ncol))), subject K>=N; tie prefer smaller K then smaller nrow",
+  "stratum_definition": "regular intervals of the rectangle of possible top-left positions, split by floor(index*size/nparts); a position belongs to one stratum by its TOP-LEFT only; ROI may cross strata",
+  "stratum_pick": "choose N of K nonempty equal-probability strata without replacement (SRSWOR); each selected stratum independently draws one allowed position uniformly",
+  "overlap": "allowed including shared pixels, no rejection, independent conditional positions; non-nested candidate N",
+  "group_estimator": "arithmetic mean of per-ROI hotspot fractions, each ROI weight 1/N (NOT union, NOT pooled area, NOT stratum-area-weighted)",
+  "cv_exact": "sqrt(within plus stratum-selection variance) / expected estimate as in cv_engine.py; no Monte Carlo seed",
+  "N_domain": "N=2..32, candidate first N in 2..30 for which exact CV at N,N+1,N+2 all<=0.20",
+  "fixed_N": "uniform minimum N satisfying same triple CV acceptance across all eight maps; 2..30",
+  "source_data": "8 individually archived original navigation PNGs; no historical mask/position/seed recovered",
+  "scientific_limitation": "top-5%-by-rank hotspot and near-white/black/annotation assumptions are new definitions; not chemical truth"
+}

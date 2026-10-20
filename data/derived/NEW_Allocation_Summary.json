@@ -1,0 +1,16 @@
+{
+  "new_fixed_N": 12,
+  "new_adaptive_N": [
+    8,
+    4,
+    12,
+    2,
+    12,
+    10,
+    11,
+    9
+  ],
+  "new_total_adaptive_ROIs": 68,
+  "fixed_total_ROIs": 96,
+  "percent_count_reduction": 29.166666666666664
+}

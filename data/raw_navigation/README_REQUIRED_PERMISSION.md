@@ -1,0 +1,1 @@
+Original navigation PNGs withheld from candidate public package. Add files only after explicit rights approval. Check SHA256 before run. Original images are provided separately inside the private Work artwork package; do not upload without permission.

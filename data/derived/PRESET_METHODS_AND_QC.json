@@ -1,0 +1,23 @@
+{
+  "input_source": "8 NAV PNG files, frozen NEW68 image transformation",
+  "proof_status": "Conditional exact finite-design calculations; NOT measured experiment, NOT external validation",
+  "estimand": "Image-derived top-5% hotspot fraction from full navigation map",
+  "roi_size": "0.2*min(image height,image width), rounded half-up",
+  "random_sampling": "SRSWOR allowed top-left positions with ROI overlaps possible",
+  "stratified_sampling": "Same NEW68 near-square grids; one position per selected stratum; ROI overlap allowed",
+  "within_map_adaptive_definition": "Identical to stratified conditional design at the same N; only N_i changes by map",
+  "equal_total_budget_baseline": "Four maps N=9, four N=8; all C(8,4)=70 assignments averaged without cherry-picking",
+  "fixed_budget": "68 ROI for main comparison; 96 ROI fixed12 shown contextual only",
+  "full_map_reference_limitation": "5% hotspot fraction is defined by image rank, not independent chemical ground truth",
+  "max_strat_CV_reproduction_abs_diff": 0.0,
+  "sha256_images": {
+    "NAV01_Massive_silty_mudstone.png": "b3edd0f65f9793bbf7ad3bdd3ce39be0188c154aa0715d9a0477195caf4ecd16",
+    "NAV02_Massive_fine_siltstone.png": "4b36b3e2a1067558fb64ef87b71b04f1f41c638e2d0a52174254bde439402ed7",
+    "NAV03_Laminated_shale.png": "c20d8115962e2c5a83678b2a588a5968bdf6d737743862284b4fddaa98ce00d3",
+    "NAV04_Bedded_argillaceous_siltstone.png": "7dfd68e40645802a4cd3312cbce67a2c0e994c59f83da50a223afb82e0a86fd3",
+    "NAV05_Massive_mud_shale.png": "cbaa2eaf975acad49acc1d56b37966e0101888893f5f99a916395feef8f7ece5",
+    "NAV06_Massive_shell_limestone.png": "6b325da02f89ae085d590666ecc8e9e512125e8c3ff017b1402591586b1457d1",
+    "NAV07_Laminated_shell_bearing_shale.png": "676a3aa18db5a5d6a9930877670757548b9d3abc6994640123298a8d7ae69585",
+    "NAV08_Bedded_shell_bearing_shale.png": "b6ab2ee0b36f52071e266bf9adf04297e5824619dca8f3bd1e6da87bf0f44819"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "bias_definition": "difference between design-expected sample mean and complete-map hotspot fraction (5% by rank)",
+  "estimator_caveat": "unweighted ROI mean is stable for ROI-support distribution, not necessarily complete-map pixel average",
+  "correction": "HT inverse expected pixel exposure; each ROI contributes sum(y_pixel/lambda_pixel)/V, coverage includes overlaps in expectation",
+  "new_budget_allocation": [
+    8,
+    4,
+    12,
+    2,
+    12,
+    10,
+    11,
+    9
+  ],
+  "fixed12_selected_using_dev6_ONLY": 12,
+  "test_maps": [
+    "c",
+    "g"
+  ],
+  "test_caveat": "Posthoc selection: these maps were previously inspected in earlier all-map tuning; not prospective untouched holdout",
+  "monte_carlo_crosscheck": {
+    "c": {
+      "N": 12,
+      "analytical_mean": 0.05000157270620789,
+      "MC_mean": 0.04936289128280565,
+      "analytical_variance": 0.00014567566785837383,
+      "MC_variance": 0.00013822480818535964,
+      "relative_variance_error_pct": -5.1146905880383065,
+      "seed": 151225,
+      "repeats": 2500
+    },
+    "g": {
+      "N": 12,
+      "analytical_mean": 0.050001879769916234,
+      "MC_mean": 0.04998308001357583,
+      "analytical_variance": 0.00017269221162986685,
+      "MC_variance": 0.00017136441189266537,
+      "relative_variance_error_pct": -0.7688822354347757,
+      "seed": 151229,
+      "repeats": 2500
+    }
+  },
+  "image_coverage_8": [
+    {
+      "map": "a",
+      "N": 8,
+      "roi_side_px": 82,
+      "valid_pixels": 167677,
+      "valid_candidate_positions": 108564,
+      "grid": "3x3",
+      "all_valid_pixels_covered": true,
+      "min_expected_pixel_exposure": 7.413585395232952e-05,
+      "1pct_expected_pixel_exposure": 0.006171308923602465,
+      "original_hotspot_mean": "",
+      "image_sha256": "b3edd0f65f9793bbf7ad3bdd3ce39be0188c154aa0715d9a0477195caf4ecd16"
+    },
+    {
+      "map": "b",
+      "N": 4,
+      "roi_side_px": 75,
+      "valid_pixels": 158442,
+      "valid_candidate_positions": 105398,
+      "grid": "2x2",
+      "all_valid_pixels_covered": true,
+      "min_expected_pixel_exposure": 3.806043997866726e-05,
+      "1pct_expected_pixel_exposure": 0.0028545329984014504,
+      "original_hotspot_mean": "",
+      "image_sha256": "4b36b3e2a1067558fb64ef87b71b04f1f41c638e2d0a52174254bde439402ed7"
+    },
+    {
+      "map": "c",
+      "N": 12,
+      "roi_side_px": 79,
+      "valid_pixels": 190754,
+      "valid_candidate_positions": 129108,
+      "grid": "3x4",
+      "all_valid_pixels_covered": true,
+      "min_expected_pixel_exposure": 9.340556697185462e-05,
+      "1pct_expected_pixel_exposure": 0.008873528862320405,
+      "original_hotspot_mean": "",
+      "image_sha256": "c20d8115962e2c5a83678b2a588a5968bdf6d737743862284b4fddaa98ce00d3"
+    },
+    {
+      "map": "d",
+      "N": 2,
+      "roi_side_px": 75,
+      "valid_pixels": 148340,
+      "valid_candidate_positions": 96876,
+      "grid": "2x1",
+      "all_valid_pixels_covered": true,
+      "min_expected_pixel_exposure": 2.064494818116439e-05,
+      "1pct_expected_pixel_exposure": 0.001548371113588473,
+      "original_hotspot_mean": "",
+      "image_sha256": "7dfd68e40645802a4cd3312cbce67a2c0e994c59f83da50a223afb82e0a86fd3"
+    },
+    {
+      "map": "e",
+      "N": 12,
+      "roi_side_px": 71,
+      "valid_pixels": 175620,
+      "valid_candidate_positions": 121836,
+      "grid": "3x4",
+      "all_valid_pixels_covered": true,
+      "min_expected_pixel_exposure": 9.930486593845527e-05,
+      "1pct_expected_pixel_exposure": 0.008452995503438582,
+      "original_hotspot_mean": "",
+      "image_sha256": "cbaa2eaf975acad49acc1d56b37966e0101888893f5f99a916395feef8f7ece5"
+    },
+    {
+      "map": "f",
+      "N": 10,
+      "roi_side_px": 84,
+      "valid_pixels": 229064,
+      "valid_candidate_positions": 156110,
+      "grid": "3x4",
+      "all_valid_pixels_covered": true,
+      "min_expected_pixel_exposure": 6.414203612478126e-05,
+      "1pct_expected_pixel_exposure": 0.005434221759652821,
+      "original_hotspot_mean": "",
+      "image_sha256": "6b325da02f89ae085d590666ecc8e9e512125e8c3ff017b1402591586b1457d1"
+    },
+    {
+      "map": "g",
+      "N": 11,
+      "roi_side_px": 79,
+      "valid_pixels": 159594,
+      "valid_candidate_positions": 103675,
+      "grid": "3x4",
+      "all_valid_pixels_covered": true,
+      "min_expected_pixel_exposure": 0.0001057651628782725,
+      "1pct_expected_pixel_exposure": 0.008368380737081902,
+      "original_hotspot_mean": "",
+      "image_sha256": "676a3aa18db5a5d6a9930877670757548b9d3abc6994640123298a8d7ae69585"
+    },
+    {
+      "map": "h",
+      "N": 9,
+      "roi_side_px": 69,
+      "valid_pixels": 129276,
+      "valid_candidate_positions": 85525,
+      "grid": "3x3",
+      "all_valid_pixels_covered": true,
+      "min_expected_pixel_exposure": 0.00010668942707784525,
+      "1pct_expected_pixel_exposure": 0.007339402974529895,
+      "original_hotspot_mean": "",
+      "image_sha256": "b6ab2ee0b36f52071e266bf9adf04297e5824619dca8f3bd1e6da87bf0f44819"
+    }
+  ],
+  "note": "This stage does not change original manuscript figures or any pixel data."
+}
